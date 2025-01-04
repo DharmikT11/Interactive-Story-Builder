@@ -1,0 +1,111 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoryForge | Interactive Story Builder</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <i class="fas fa-feather-alt fa-spin"></i>
+            <span>Loading StoryForge...</span>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo animate__animated animate__fadeIn">
+                <i class="fas fa-book-open"></i>
+                <span>StoryForge</span>
+            </div>
+            
+            <!-- Settings Section -->
+            <div class="settings-section animate__animated animate__fadeIn">
+                <div class="nav-buttons">
+                    <button id="theme-toggle" class="nav-btn" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="help-btn" class="nav-btn" title="Help">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="page-header animate__animated animate__fadeIn">
+                <h1>Interactive Story Builder</h1>
+                <p>Craft your narrative journey with our intuitive story builder</p>
+                
+                <!-- Quick Actions -->
+                            </header>
+
+            <section id="story-builder" class="story-builder">
+                <!-- Story Editor Panel -->
+                <div id="editor" class="editor-panel animate__animated animate__fadeInLeft">
+                    <div class="panel-header">
+                        <h2><i class="fas fa-edit"></i> Story Editor</h2>
+                        <div class="toolbar">
+                            
+                            <button id="add-node-btn" class="btn primary">
+                                <i class="fas fa-plus"></i> Add Node
+                            </button>
+                            <button id="save-story-btn" class="btn success">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="nodes-container" class="nodes-container">
+                        <div class="empty-state">
+                            <i class="fas fa-feather-alt"></i>
+                            <p>Start your story by adding a new node</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Preview Panel -->
+                <div id="preview" class="preview-panel animate__animated animate__fadeInRight">
+                    <div class="panel-header">
+                        <h2><i class="fas fa-eye"></i> Story Preview</h2>
+                        <div class="toolbar">
+                            <button id="export-btn" class="btn secondary">
+                                <i class="fas fa-download"></i> Export
+                            </button>
+                        </div>
+                    </div>
+                    <div id="preview-container" class="preview-container">
+                        <div class="empty-state">
+                            <i class="fas fa-book"></i>
+                            <p>Your story preview will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Status Bar -->
+        <div class="status-bar" id="statusBar">
+            <div class="sync-status">
+                <i class="fas fa-sync-alt"></i>
+                <span>All changes saved</span>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
